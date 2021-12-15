@@ -8,6 +8,7 @@ import javax.annotation.PreDestroy;
 @Component
 public class SpringBean2 {
 
+
     @PostConstruct
     public void init(){
         System.out.println("SpringBean2 - Initialization");

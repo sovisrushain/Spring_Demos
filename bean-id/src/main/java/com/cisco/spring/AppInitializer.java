@@ -7,7 +7,11 @@ public class AppInitializer {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.register(AppConfig.class);
         ctx.refresh();
-        ctx.registerShutdownHook();
-        ctx.close();
+
+        System.out.println(ctx.containsBeanDefinition("springBean"));
+        System.out.println(ctx.containsBeanDefinition("myBean"));
+        System.out.println(ctx.containsBeanDefinition("abc"));
+        System.out.println(ctx.containsBeanDefinition("springBeanTwo"));
+        System.out.println(ctx.containsBeanDefinition("myTestBean"));
     }
 }
